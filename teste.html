@@ -1,36 +1,171 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script type="text/javascript">
-array1 = new Array ("1.bmp", "2.bmp", "3.bmp")
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700;100&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+    function img01() {
+        var imagem = document.getElementById("perfil");
+        var txt = document.getElementById("texto");
+        var nome = document.getElementById("nome");
+        var cargo = document.getElementById("cargo");
+        nome.innerHTML = "Chris Oliveira";
+        cargo.innerHTML = "Costumer Success";
+        txt.innerHTML ="Sed ut perspiciatis unde omnis iste natus error sit volup tatem <br> accusantium doloremque laudantium totam rem aperiam, eaque ipsa. Sed ut perspiciatis <br> unde omnis iste natus error sit volup tatem <br>accusantium doloremque laudantium totam rem aperiam, eaque ipsa.";
+        imagem.src="img1.png";
+    }
+    function img02() {
+        var imagem = document.getElementById("perfil");
+        var txt = document.getElementById("texto");
+        var nome = document.getElementById("nome");
+        var cargo = document.getElementById("cargo");
+        nome.innerHTML = "Maria";
+        cargo.innerHTML = "Gerente";
+        txt.innerHTML ="Sed ut perspiciatis unde omnis iste natus error sit volup tatem accusantium <br> doloremque laudantium totam rem aperiam, eaque ipsa. <br>Sed ut perspiciatis unde omnis  iste natus error sit volup <br>tatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa.";
+        imagem.src="img2.png";
+    }
+    function img03() {
+        var imagem = document.getElementById("perfil");
+        var txt = document.getElementById("texto");
+        var nome = document.getElementById("nome");
+        var cargo = document.getElementById("cargo");
+        nome.innerHTML = " João";
+        cargo.innerHTML = "Vendedor";
+        txt.innerHTML ="Sed ut perspiciatis unde omnis iste natus error sit volup tatem<br> accusantium doloremque laudantium totamrem aperiam, eaque ipsa.<br>  Sed ut perspiciatis unde omnis iste  natus error<br> sit volup tatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa.";
+        imagem.src="img3.png";
+    }
+    </script>
+    <style>
+        *{margin: 0px;
+        padding: 0px;
+        }
+        h1, h2{
+            font-family: 'Ubuntu', sans-serif;
+            color: #222222 ;
+            line-height: 40px;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        h2{
+            font-weight: 400;
+            font-size: 25px;
+        }
+        h3{
+            font-family: 'Ubuntu', sans-serif;
+            color: #76FFDA ;
+            line-height: 38px; 
+            font-weight: bold;
+            font-size: 33px;
+            margin-top: 90px;
+            margin-bottom: 25px;
+        }
+        h4,h5 {
+            font-family: 'Ubuntu', sans-serif;
+            color: white;
+            line-height: 20px;
+            font-size: 20px; 
+        }
+        h4{            
+            font-weight: bold;
+        }
+        h5{
+            font-weight:100;
+            margin-bottom: 15px;
+        }
+        #slider {
+            background-image: url('bg.png');
+            background-position: center;
+            background-clip:border-box;
+            background-repeat: no-repeat;
+            margin-top: 0px;
+            height: 500px;
+            width: 100%;
+            vertical-align:middle;
+        }
+        img{
+            height: 180px;
+            width: 180px ;
+            margin-left: 15%;
+        }
+        .rad{
+            cursor: pointer;
+             color: khaki;
+            }
+        p{
+            font-family:sans-serif ;
+            color: white;
+            font-size: 18px;
+            float:right;
+            margin-right: 15%;
+            text-align: left;
+        }
+        #btns{text-align: center;}
+        #r4 {
+            background-color: #676767;
+            height:10px ;
+            width: 10px;
+            border-radius: 8px;
+        }
+        #r4:active {
+            background-color:black;
+            height:15px ;
+            width: 15px;
+            border-radius: 8px;
+        }
 
-function comeco(){
-document.getElementById('imgId').src = array1[0]
-document.form.texto.value="0"
-}
+        @media (max-width: 500px) 
+        {
+            #slider {
+            background-image: url('');
+            background-color: #5B6A76;
+            padding-top: 30px;
+            padding-bottom: 80px;
+        }
+            p{
+                text-align: center;
+                margin-right: 0%;
+                margin-bottom: 10px;
+            }
+            img {
+                margin-left: 0px;
+                margin-bottom: 20px;
+            }
+            h3 {
+                margin-top: 0px;
+            }
+            #btns{
+                background-color: #5B6A76;  
+            }
+        }
 
-function mais(){
-document.form.texto.value = Math.floor (1+ 1 - 2 + (document.form.texto.value) * 1 + 1)
-if (document.form.texto.value > 2)
-{document.form.texto.value = 0}
-}
-
-function menos(){
-document.form.texto.value = Math.floor (1+ 1 - 2 + (document.form.texto.value) * 1 -1)
-if (document.form.texto.value < 0)
-{document.form.texto.value = 2}
-}
-
-function regular(){
-document.getElementById('imgId').src = array1[document.form.texto.value];
-setTimeout("regular()", 1)
-}
-</script>
-<body onLoad="comeco();regular()">
-<a id="aId"><img id="imgId"></a>
-</br>
-<a id="prev" href="javascript:menos()">Anterior</a>.<a id="next" href="javascript:mais()">Próximo</a>
-<form name="form">
-<input type=text name="texto">
-</form>
+    </style>
+</head>
+<body>
+    <div style="text-align: center; width: 100%;">
+        <div style="text-align: center;">
+        <h1>Depoimentos</h1>
+        <h2>Vimakers</h2>
+    </div>
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <div id="slider">
+            <h3>Ser Vimaker é incrível</h3>
+            <img id="perfil" src="img1.png" alt="">
+            <p id="texto">
+                Sed ut perspiciatis unde omnis iste natus error sit volup tatem <br> accusantium doloremque laudantium totam rem aperiam, eaque ipsa. Sed ut perspiciatis <br> unde omnis iste natus error sit volup tatem <br>accusantium doloremque laudantium totam rem aperiam, eaque ipsa.
+                <h4 id="nome"> Chris Oliveira</h4>
+                <h5 id="cargo">Costumer Success</h5>
+            </p>
+        </div>
+    </div>
+    <div id="btns">
+        <input type="radio" class="rad" name="teste" id="r1" onclick="img01()" checked>
+        <input type="radio" class="rad" name="teste" id="r2" onclick="img02()">
+        <input type="radio" class="rad" name="teste" id="r3" onclick="img03()">
+    </div>
+    </div>
 </body>
-</HTML>
+</html>
